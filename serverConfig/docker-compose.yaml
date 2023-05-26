@@ -1,0 +1,155 @@
+version: "3.7"
+services:
+
+  app:
+    container_name: 'app'
+    image: app
+    depends_on:
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    build:
+      context: app
+      dockerfile: dockerfile
+    ports:
+      - '0.0.0.0:81:3000'
+    networks:
+      - custom
+  app2:
+    container_name: 'app2'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:82:3000'
+    networks:
+      - custom
+  app3:
+    container_name: 'app3'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:83:3000'
+    networks:
+      - custom
+
+
+  mongo_db:
+    image: mongo:4.4.6
+    container_name: 'mongo_db'
+    ports:
+      - '0.0.0.0:27017:27017'
+    networks:
+      - custom
+
+  app4:
+    container_name: 'app4'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:84:3000'
+    networks:
+      - custom
+  app5:
+    container_name: 'app5'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:85:3000'
+    networks:
+      - custom
+  app6:
+    container_name: 'app6'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:86:3000'
+    networks:
+      - custom
+  app7:
+    container_name: 'app7'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:87:3000'
+    networks:
+      - custom
+  app8:
+    container_name: 'app8'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:88:3000'
+    networks:
+      - custom
+  app9:
+    container_name: 'app9'
+    image: app
+    depends_on:
+      - app
+      - mongo_db
+    environment:
+      - DB_CONNECTION=mongodb://mongo_db/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.2
+      - PORT=3000
+    ports:
+      - '0.0.0.0:89:3000'
+    networks:
+      - custom
+
+#  site:
+#    container_name: 'site'
+#    image: site
+#    build:
+#        context: nginx
+#        dockerfile: dockerfile
+#    ports:
+#        - '0.0.0.0:80:80'
+#        - '0.0.0.0:443:443'
+#    volumes:
+#        - /etc/letsencrypt:/etc/letsencrypt
+#        - ./nginx/nginx.conf:/etc/nginx/sites-available/default
+#        - /var/log/nginx:/var/log/nginx
+#        - /var/log/letsencrypt:/var/log/letsencrypt
+#    networks:
+#        - custom
+#    command:
+#        "certbot certonly --email wizard102004@yandex.ru --webroot -w /var/lib/letsencrypt/ -d farm.vp-pspu.cf"
+
+networks:
+  custom:
+    driver: bridge

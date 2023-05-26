@@ -1,0 +1,23 @@
+FROM debian:latest
+
+# install nginx
+RUN apt update -y
+RUN apt install -y nginx python3-certbot python3-certbot-nginx
+ 
+# deamon mode off
+RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+RUN chown -R www-data:www-data /var/lib/nginx
+
+# volume
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx"]
+
+# expose ports
+EXPOSE 80 443
+
+# add nginx conf
+#ADD nginx.conf /etc/nginx/sites-available/default
+#ADD farm.vp-pspu.cf/ /etc/letsencrypt/live
+#ADD ssl-dhparams.pem /etc/letsencrypt
+#ADD options-ssl-nginx.conf /etc/letsencrypt  
+WORKDIR /etc/nginx
+CMD ["nginx"]
