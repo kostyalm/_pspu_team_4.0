@@ -1,0 +1,61 @@
+.registerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+    height: min-content;
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 40px 40px 29px 40px;
+}
+@media (max-width: 480px) {
+    .registerCard {
+        padding: 36px 16px;
+    }
+}
+
+.span {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Open Sans', serif;
+}
+.formContainer {
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+}
+.footer {
+    margin-top: 115px;
+    font-family: "Open Sans";
+    color: #A7A7A7;
+}
+.registerLink {
+    color: #007A4F;
+    font-weight: 400;
+}
+.registerLink:hover {
+    cursor: pointer;
+}
+.agreement{
+    margin-top: 8px;
+    font-family: "Open Sans";
+    color: #A7A7A7;
+    font-size: 14px;
+}
+.agreeDiv{
+    margin-top: 24px;
+}
+
+
+
+

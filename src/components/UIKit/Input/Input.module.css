@@ -1,0 +1,12 @@
+.input {
+    padding: 12px 16px;
+    border-radius: 10px !important;
+    border: 1px solid var(--brandColor) !important;
+    outline: none;
+    font-family: 'Open Sans';
+}
+@media (max-width: 480px) {
+    .input {
+        width: 70vw !important;
+    }
+}

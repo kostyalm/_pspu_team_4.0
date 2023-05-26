@@ -1,0 +1,48 @@
+.productBasket{
+    margin-top: 99px;
+    position: relative;
+}
+.basketText{
+    font-family: 'Raleway', italic;
+    font-size: 48px;
+}
+.basketDivMain{
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    color: #ffff;
+    width: 50%;
+}
+.basketTextP{
+    margin-top: 32px;
+    width:85%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+.butChooseProduct{
+    width: 252px;
+    height: 48px;
+    background-color: var(--brandColor);
+    border-color: #ffff;
+    color: #ffff;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    border-radius: 10px;
+    border: 1px solid;
+    margin-top: 48px;
+}
+.butChooseProduct:hover {
+    background: #fffF;
+    color: var(--brandColor);
+    border-color: var(--brandColor);
+
+}
+.butChooseProduct:active {
+    scale: 0.95;
+}

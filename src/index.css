@@ -1,0 +1,19 @@
+:root {
+    --brandColor: #80CA7B;
+    --buttonTextColor: #fff;
+    --menuText: rgba(30,30,30,1);
+}
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root {
+    height: 100vh;
+}
+.App {
+    height: 100%;
+}
+.setRed {
+    border-color: red !important;
+}

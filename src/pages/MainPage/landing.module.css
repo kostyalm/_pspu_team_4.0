@@ -1,0 +1,119 @@
+.page {
+    padding: 0 104px;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.banner{
+    position: relative;
+    width: 100%;
+}
+@media (max-width: 1440px) {
+    .page {
+        padding: 0 64px;
+    }
+}
+.mainBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,600&display=swap');
+
+.productList{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: left;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 32px;
+
+}
+.headText{
+    font-family: 'Raleway', italic;
+    font-size: 48px;
+    margin-top: 107px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.ourProductDiv{
+    width: 100%;
+    margin: 0 auto;
+}
+.productBasket{
+    margin-top: 99px;
+    position: relative;
+}
+.basketText{
+    font-family: 'Raleway', italic;
+    font-size: 48px;
+}
+.basketDivMain{
+    position: absolute;
+    left: 40px;
+    top: 221px;
+    color: #ffff;
+    width: 50%;
+}
+.basketTextP{
+    margin-top: 32px;
+    width:85%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+.butChooseProduct{
+    width: 252px;
+    height: 48px;
+    background-color: var(--brandColor);
+    border-color: #ffff;
+    color: #ffff;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    border-radius: 10px;
+    border: 1px solid;
+    margin-top: 48px;
+}
+.butChooseProduct:hover {
+    background: #fffF;
+    color: var(--brandColor);
+    border-color: var(--brandColor);
+
+}
+.butChooseProduct:active {
+    scale: 0.95;
+}
+.fermersDiv{
+    margin-top: 32px;
+    width: 100%;
+}
+.fermersText{
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
+}
+.fermersCards{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
