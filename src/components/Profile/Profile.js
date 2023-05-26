@@ -2,6 +2,7 @@ import styles from './profile.module.css';
 import {Input} from "../UIKit/Input/Input";
 import {useContext} from "react";
 import {Context} from "../../index";
+import {UrProducts} from "../UrProducts/UrProducts";
 export const Profile = () => {
     const {store} = useContext(Context);
     return (
@@ -27,9 +28,7 @@ export const Profile = () => {
             </div>
 
             <div className={styles.productsContainer}>
-                <div className={styles.productsContainer}>
-
-                </div>
+                <UrProducts/>
             </div>
         </div>
     );

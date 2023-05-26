@@ -131,14 +131,6 @@ export const MainPage = () => {
               <FermerCard />
             </div>
           </div>
-          {/* <FermerForm /> */}
-          <div className={styles.fermersDiv}>
-          <div className={styles.fermersText}>
-              ФЕРМЕРЫ, КОТОРЫЕ ТРУДЯТСЯ ДЛЯ ВАС
-            </div>
-            <div className={styles.fermersCards}><UrProducts /></div>
-            
-          </div>
         </main>
       </div>
       <Footer />

@@ -13,13 +13,13 @@ export const UrProducts = () => {
     <div className={styles.mainDiv}>
       <div className={styles.textDiv}>ВАШИ ТОВАРЫ</div>
       <div className={styles.delay}>
-        <div className={styles.forAllCards}>
+        {/*<div className={styles.forAllCards}>*/}
           <ProductForm />
           <ProductCard />
           <ProductCard />
           <ProductCard />
         </div>
-      </div>
+      {/*</div>*/}
     </div>
   );
 };

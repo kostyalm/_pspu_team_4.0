@@ -5,6 +5,7 @@ import {MainPage} from "./pages/MainPage/MainPage";
 import {ProductPage} from "./pages/ProductPage/ProductPage";
 import {Profile} from "./components/Profile/Profile";
 import {observer} from "mobx-react-lite";
+import {ProfilePage} from "./pages/ProfilePage/ProfilePage";
 const App = observer(({store}) => {
   return (
     // <div className="App">
@@ -15,7 +16,7 @@ const App = observer(({store}) => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<MainPage />} />
         <Route path="/product" element={<ProductPage />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

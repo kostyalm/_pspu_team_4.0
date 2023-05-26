@@ -14,7 +14,7 @@
     text-align: left;
 }
 .delay{
-    /* width: 100%; */
+    width: 100%;
     height: min-content;
     display: flex;
     flex-direction: row;

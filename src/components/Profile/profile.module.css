@@ -13,6 +13,7 @@
 }
 .aboutContainer {
     width: 50%;
+    margin-right: 40px;
 }
 .about {
     height: min-content;
@@ -78,5 +79,5 @@
     background: green;
 }
 .productsContainer {
-
+    width: 50%;
 }

@@ -17,8 +17,8 @@ export const Header = () => {
                 <Input name={'search'} placeholder={'Найти среди 1000 товаров'} style={{ marginLeft: '40px'}}/>
             </div>
             <menu className={styles.menuContainer}>
-                <div className={styles.menuItem}>Фермерам</div>
-                <div className={styles.menuItem}>Доставка</div>
+                <div className={styles.menuItem} onClick={() => navigate('/profile')}>Профиль</div>
+                <div className={styles.menuItem} onClick={() => navigate('/product')}>Продукт</div>
                 <div className={styles.menuItem}>Контакты</div>
             </menu>
             <div className={styles.buttonsContainer}>
