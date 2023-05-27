@@ -30,6 +30,7 @@
     margin-bottom: 16px;
 }
 .cardName {
+    word-wrap: anywhere;
     font-family: "Inter";
     font-size: 24px;
     font-weight: 500;

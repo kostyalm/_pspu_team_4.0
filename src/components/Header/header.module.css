@@ -15,6 +15,7 @@
     margin-right: 48px;
 }
 .logo {
+    cursor: pointer;
     width: 40%;
     display: flex;
     align-items: center;
@@ -46,6 +47,7 @@
 }
 
 .menuItem {
+    cursor: pointer;
     color: var(--menuText);
     font-weight: 300;
     font-family: 'Open Sans';

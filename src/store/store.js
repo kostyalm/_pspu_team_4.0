@@ -1,18 +1,12 @@
 import {makeAutoObservable} from "mobx";
 import UserService from "../services/user.service";
+import api from "../api";
 
 export default class Store {
-    user;
-    isAuth;
+    user = {};
+    isAuth = false;
     constructor() {
         makeAutoObservable(this);
-    }
-
-    getUser = () => {
-        return this.user;
-    }
-    getAuth = () => {
-        return this.isAuth;
     }
     setAuth = (auth) => {
         this.isAuth = auth;
@@ -23,9 +17,9 @@ export default class Store {
 
     login = async (email, password) => {
         try {
-            const user = await UserService.login(email, password);
-            localStorage.setItem('token', user.data.accessToken);
-            this.setUser(user);
+            const res = await UserService.login(email, password);
+            localStorage.setItem('token', res.data.accessToken);
+            this.setUser(res.data.user);
             this.setAuth(true);
         } catch (e) {
             console.log(e.response?.data?.message);
@@ -33,9 +27,9 @@ export default class Store {
     }
     register = async (email, password) => {
         try {
-            const user = await UserService.register(email, password);
-            localStorage.setItem('token', user.data.accessToken);
-            this.setUser(user);
+            const res = await UserService.register(email, password);
+            localStorage.setItem('token', res.data.accessToken);
+            this.setUser(res.data.user);
             this.setAuth(true);
         } catch (e) {
             console.log(e.response?.data?.message);
@@ -50,6 +44,19 @@ export default class Store {
             this.setAuth(false);
         } catch (e) {
             console.log(e.response?.data?.message);
+        }
+    }
+
+    checkAuth = async () => {
+        try {
+            const res = await api.get('/users/refresh');
+
+            localStorage.setItem('token', res.data.accessToken);
+            this.setUser(res.data.user);
+            this.setAuth(true);
+            console.log(this.user.email, this.isAuth);
+        }catch (e) {
+            console.log(e)
         }
     }
 }

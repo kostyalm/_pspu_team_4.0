@@ -1,0 +1,8 @@
+.loginPage {
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 99vh;
+}

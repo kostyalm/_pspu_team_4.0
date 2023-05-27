@@ -1,18 +1,16 @@
 import styles from "./productCard.module.css";
-export const ProductCard = () => {
+export const ProductCard = ({product}) => {
     return (
         <div className={styles.cardContainer}>
             <div className={styles.cardContent}>
                 <div className={styles.cardImage}></div>
                 <div className={styles.main}>
-                    <div className={styles.cardName}>Some name</div>
+                    <div className={styles.cardName}>{product.name}</div>
                     <div className={styles.price}>
-                        <span>250{' '}Р</span><span className={styles.priceAmount}>/1 шт</span>
+                        <span>{product.price}{' '}Р</span><span className={styles.priceAmount}>/1 шт</span>
                     </div>
                     <div className={styles.description}>
-                        dadada
-                        dadadaa
-                        daadada
+                        {product.description}
                     </div>
                 </div>
 

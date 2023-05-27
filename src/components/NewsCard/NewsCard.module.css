@@ -1,22 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-.cardMainDivPadd{
+.mainDivPadding{
     width: 100%;
     height: min-content;
-
-
     border: 2px solid #EAF0FF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     padding: 24px;
     margin-top: 24px;
-    
     justify-content: space-between;
 }
-.cardMainDivMove{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1.5fr;
-    width: 100%;
-    gap: 20px;
+.mainDivFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .cardPhoto{
     display: flex;
@@ -29,15 +26,17 @@
     flex-direction: column;
     justify-content:space-between;
 }
-.infoName{
+.divTextH1{
     text-align: left;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
+    width: 30%;
+    
 }
-.categ{
+.keyWord{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
@@ -45,7 +44,7 @@
     line-height: 22px;
     color:  #7C7C7C;
 }
-.infoCategories{
+.keyWords{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
@@ -53,18 +52,18 @@
     line-height: 22px;
     color:  #1E1E1E;
 }
-.infoDescription{
+.description{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
 }
-.rightPart{
+.divOverAllInfo{
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
-    align-items: flex-end;
+    width: 30%;
+    align-items: flex-start;
 }
 .mark{
     font-family: 'Open Sans';
@@ -76,10 +75,7 @@
     flex-direction: row;
     align-items: end;
 }
-.buttonR{
-
-}
-.bt{
+.button{
     width: 252px;
     height: 48px;
     background-color: var(--brandColor);
@@ -92,6 +88,11 @@
     line-height: 27px;
     border-radius: 10px;
     border: 1px solid;
+}
+
+
+.bt{
+    
 }
 .bt:hover {
     background: #007A4F;

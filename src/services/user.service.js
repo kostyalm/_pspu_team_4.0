@@ -35,7 +35,7 @@ export default class UserService {
     }
     static async getUsers() {
         try {
-            const res = await api.post('/users/',);
+            const res = await api.get('/users/',);
             return res;
         } catch (e) {
             console.log(e);

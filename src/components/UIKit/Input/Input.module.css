@@ -5,8 +5,8 @@
     outline: none;
     font-family: 'Open Sans';
 }
-@media (max-width: 480px) {
-    .input {
-        width: 70vw !important;
-    }
-}
+/*@media (max-width: 480px) {*/
+/*    .input {*/
+/*        width: 70vw !important;*/
+/*    }*/
+/*}*/

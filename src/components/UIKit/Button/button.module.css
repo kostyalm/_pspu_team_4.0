@@ -1,17 +1,16 @@
 .button {
-    width: min-content;
+    width: 100%;
     height: min-content;
     background: #80CA7B;
     border-radius: 10px;
-    padding: 12px 85px;
+    padding: 12px 0;
     font-size: 20px;
     color: var(--buttonTextColor);
     font-family: 'Open Sans';
     cursor: pointer;
     border: none;
     transition: all 0.2s;
-    white-space: nowrap
-    
+    white-space: nowrap;
 }
 .button:hover {
     background: #007A4F;
